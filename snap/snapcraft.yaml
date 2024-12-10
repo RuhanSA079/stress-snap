@@ -1,0 +1,17 @@
+name: stress-snap
+base: core20
+version: '0.1'
+summary: Linux stress utility in a snap
+description: N/A
+grade: devel
+confinement: devmode
+
+parts:
+  my-part:
+    plugin: nil
+    stage-packages:
+      - stress
+
+apps:
+  stress:
+    command: usr/bin/stress
